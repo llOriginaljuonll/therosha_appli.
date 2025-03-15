@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}therosha forms{% endblock title %}</title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static "dist/styles.css" %}">
+    {% endblock css %}
+    {% block headers %}{% endblock headers %}
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% block content %}{% endblock content %}
+
+    {% block javascript %}{% endblock javascript %}
+    <script src="{% static "js/flowbite.min.js" %}"></script>
+</body>
+</html>
